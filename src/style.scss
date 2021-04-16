@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+}
+
+#content {
+  display: flex;
+}
+
+.image {
+  width: 40vw;
+  height: 100vh;
+  background: url(assets/sushi.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main {
+  width: 60vw;
+  height: 100vh;
+  background: url(assets/background.jpg);
+  background-size: contain;
+}
+
+header {
+  padding: 20px 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  background: url(assets/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.menu {
+  padding: 20px 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.item {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // text-align: center;
+
+  h2 {
+    font-size: 28px;
+    font-family: 'New Tegomin', serif;
+  }
+
+  p {
+    font-size: 18px;
+    font-family: 'Nanum Brush Script', cursive;
+  }
+}
