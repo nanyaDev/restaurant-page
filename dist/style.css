@@ -23,26 +23,61 @@ body {
 .main {
   width: 60vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: url(assets/background.jpg);
   background-size: contain;
 }
 
 header {
-  padding: 20px 50px;
+  padding: 80px 0 50px 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  margin-right: 40px;
+  flex-grow: 2;
+  display: flex;
+  justify-content: space-evenly;
+}
+nav > button {
+  background: transparent;
+  color: white;
+  border: none;
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+nav > button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+nav > button:focus {
+  outline: none;
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
   background: url(assets/logo.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
+#display {
+  flex-grow: 2;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
 .menu {
-  padding: 20px 60px;
+  padding: 0 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -58,8 +93,31 @@ header {
 .item h2 {
   font-size: 28px;
   font-family: "New Tegomin", serif;
+  color: #aaa;
 }
 .item p {
   font-size: 18px;
   font-family: "Nanum Brush Script", cursive;
+}
+
+.contact,
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 36px;
+  text-align: center;
+  color: white;
+}
+.contact > p:first-child,
+.about > p:first-child {
+  margin-bottom: 30px;
+}
+
+.contact {
+  font-family: "Nanum Brush Script", cursive;
+}
+
+.about {
+  font-family: "New Tegomin", serif;
 }
